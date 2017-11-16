@@ -1,0 +1,102 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+   }
+
+   .container{
+       width: 670px;
+       height: 600px;
+       background: rgb(197, 197, 181);
+       padding: 20px 10px 20px 10px;
+   }
+   .header{
+       display:inline;
+       padding: 10px 10px 45px 10px;
+       text-align:center;
+   }
+   h1 {
+       display:inline;
+   }
+
+   .wrapper1{
+    display: inline-block;
+    padding:0px;
+    margin:0px;
+   }
+
+   .wrapper2{
+    display: inline-block;
+    padding:0px;
+    margin:0px;
+}
+    .wrapper3{
+    display: inline-block;
+    padding:0px;
+    margin:0px;
+}
+    .wrapper4{
+    display: inline-block;
+    padding:0px;
+    margin:0px;
+}
+    .wrapper5{
+    display: inline-block;
+    padding:0px;
+    margin:0px;
+}
+    .header-image img{
+        width: 100px;
+        height: 50px;
+        background: white;
+    }
+
+   .column1 img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    border:3px solid;
+    background: rgb(100, 168, 233);
+    padding: 10px;
+    margin: 5px 0px;
+   }
+
+   .column2 img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    border:3px solid;
+    background: rgb(231, 128, 145);
+    padding: 10px;
+    margin: 5px 0px;
+   }
+
+   .column3 img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    border:3px solid;
+    background: rgb(100, 168, 233);
+    padding: 10px;
+    margin: 5px 0px;
+   }
+
+   .column4 img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    border:3px solid;
+    background: rgb(231, 128, 145);
+    padding: 10px;
+    margin: 5px 0px;
+   }
+
+   .column5 img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    border:3px solid;
+    background: rgb(100, 168, 233);
+    padding: 10px;
+    margin: 5px 0px;
+   }

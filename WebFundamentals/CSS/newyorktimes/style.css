@@ -1,0 +1,56 @@
+.wrapper
+{
+width: 1200px;
+height: auto;
+background-color: white;
+margin-bottom: 50px;
+}
+
+.header
+{
+width: 1400px;
+height: 100px;
+margin: 20px;
+background: blue;
+;
+
+}
+
+nav
+{
+    text-align:center;
+                
+}
+
+.title
+{
+text-align:center;
+background: gray;
+}
+
+
+.sections {
+    border: none;
+    padding: 0;
+    background: none;
+  }
+
+.firstNews {
+    background: yellow;
+    display: inline-block;
+    width: 350px;
+    height: 700px;
+}
+.secondNews {
+    background: green;
+    display: inline-block;
+    width: 450px;
+    height: 500px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+.audio {
+    background: red;
+    display: inline-block;
+    width: 450px;
+}
