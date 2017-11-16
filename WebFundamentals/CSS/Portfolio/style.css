@@ -19,11 +19,15 @@ h3 {
     font-family: Arial, Helvetica, sans-serif;
 }
 .main{
-    background: purple;
     width:970px;
     height:auto;
     margin: 0px;
     padding: 20px 5px 20px 20px;
+    background: rgb(122, 94, 105); /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(rgb(122, 94, 105), rgb(63, 55, 62), black); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(rgb(122, 94, 105), rgb(63, 55, 62) black); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(rgb(122, 94, 105), rgb(63, 55, 62), black); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(rrgb(122, 94, 105), rgb(63, 55, 62), black); /* Standard syntax */
 }
 .picturecontainer{
     width:410px;
@@ -44,13 +48,18 @@ h3 {
     vertical-align: top;
 }
 .title{
-    width:390px;
+    width:485px;
     height:20px;
-    background:gray;
+    /*background:gray;*/
     color: white;
     font-size: 19px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
+    background:gray; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(lightgrey, gray, lightgrey); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(lightgrey, gray, lightgrey); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(lightgrey gray, lightgrey); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(lightgrey, gray, lightgrey); /* Standard syntax */
 }
 .info{
     width:485px;
@@ -61,37 +70,47 @@ h3 {
 .section{
     width:300px;
     height:400px;
-    background: white;
     display: inline-block;
     vertical-align:top;
     margin: 20px 20px 0px 0px;
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, white , rgb(187, 167, 184)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, white, rgb(187, 167, 184)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, white, rgb(187, 167, 184)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, white , rgb(187, 167, 184)); /* Standard syntax */
 }
 .section2{
     width:300px;
     height:200px;
-    background:white;
     display: inline-block;
-    vertical-align:top;
     margin-right:20px;
+    padding-bottom:15px;
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, white , rgb(187, 167, 184)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, white, rgb(187, 167, 184)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, white, rgb(187, 167, 184)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, white , rgb(187, 167, 184)); /* Standard syntax */
 }
 .sectiontitle{
     width:280px;
     height:20px;
-    background:gray;
     color: white;
     font-size: 19px;
     font-family: Arial, Helvetica, sans-serif;
     padding:10px;
+    background:gray; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(lightgrey, gray, lightgrey); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(lightgrey, gray, lightgrey); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(lightgrey gray, lightgrey); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(lightgrey, gray, lightgrey); /* Standard syntax */
 }
-.sectionimage img{
+.sectionImage {
     width:300px;
 }
-.icons{
-    padding:10px;
-}
-.icons img{
+.icons {
     width:42px;
-    padding: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 .footer{
     background:gray;
@@ -119,8 +138,21 @@ p.example {
     padding:10px;
     font-size:15px;
 }
-p.greenButtons {
+.buttonContainer {
     text-align:center;
+    margin-top:10px;
+}
+p.greenButtons {
+    background-color: rgb(41, 83, 42); /* Green */
+    border: 1px solid black;
+    border-radius:10px;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    box-shadow: 5px 5px 5px grey;
+}
 }
 p.email {
     margin-bottom:10px;
