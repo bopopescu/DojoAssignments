@@ -1,0 +1,231 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+p{
+    font-family:Arial;
+}
+p.main-text, ul, ol{
+    font-size:13px;
+}
+ul, ol{
+    font-family:Arial;
+}
+img.globe{
+    width:95px;
+    display:inline-block;
+    position:relative;
+    top:20px;
+}
+.wrapper{
+    width:1005px;
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(211, 211, 211), white 15%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(211, 211, 211), white 15%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(211, 211, 211), white 15%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(211, 211, 211), white 15%); /* Standard syntax */
+}
+p.header{
+    width:470px;
+    height:50px;
+    display:inline-block;
+    vertical-align:top;
+    font-size:40px;
+    margin-top:50px;
+}
+p.header2{
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(47, 120, 202), rgb(117, 177, 241), rgb(47, 120, 202)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(47, 120, 202), rgb(117, 177, 241), rgb(47, 120, 202)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(47, 120, 202), rgb(117, 177, 241), rgb(47, 120, 202)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(47, 120, 202), rgb(117, 177, 241), rgb(47, 120, 202)); /* Standard syntax */
+    width:980px;
+    /*margin-top:-29px;*/
+    font-size: 25px;
+    padding:15px 5px 15px 20px;
+    color: white;
+}
+.sidebar{
+    width:180px;
+    height:600px;
+    display:inline-block;
+    padding:5px;
+}
+p.text1{
+    font-size:15px;
+    font-weight:bold;
+    margin-top:10px;
+}
+p.text2{
+    font-size:13px;
+    font-weight:bold;
+    margin:10px 0px;
+}
+.ad-background{
+    background-image: url("images/ad_background.png");
+    background-size:cover;
+    width:100%;
+    height:235px;
+    /*text-align:center;*/
+    padding: 20px 0px;
+    margin-top:20px;
+}
+p.ad-text{
+    color:white;
+    font-size:20px;
+}
+img.ninja{
+    width:85px;
+}
+p.video-button, p.resources-button, .ad-background{
+    box-shadow: 2px 2px 2px grey;
+    text-align:center;
+}
+p.video-button{
+    background: rgb(47, 120, 202); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(117, 177, 241), rgb(47, 120, 202)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(117, 177, 241), rgb(47, 120, 202)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(117, 177, 241), rgb(47, 120, 202)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(117, 177, 241), rgb(47, 120, 202)); /* Standard syntax */
+    border: none;
+    border-radius:5px;
+    color: white;
+    padding: 7px 20px;
+    /*text-align: center;*/
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top:10px;
+    width:75%;
+}
+p.resources-button{
+    background: rgb(216, 125, 21); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(255, 183, 110), rgb(216, 125, 21)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(255, 183, 110), rgb(216, 125, 21)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(255, 183, 110), rgb(216, 125, 21)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(255, 183, 110), rgb(216, 125, 21)); /* Standard syntax */
+    border: none;
+    border-radius:5px;
+    color: white;
+    padding: 7px 20px;
+    /*text-align: center;*/
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin:10px 0px 10px 0px;
+    width:75%;
+}
+p.ad-button{
+    background: rgb(35, 176, 211); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(73, 213, 245), rgb(35, 165, 190)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(73, 213, 245), rgb(35, 165, 190)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(73, 213, 245), rgb(35, 165, 190)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(73, 213, 245), rgb(35, 165, 190)); /* Standard syntax */
+    border: none;
+    border-radius:5px;
+    color: white;
+    padding: 7px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top:10px;
+}
+.main{
+    width:770px;
+    height:600px;
+    display:inline-block;
+    vertical-align:top;
+    padding-left:30px;
+    padding-right:10px;
+}
+img.home{
+    width:20px;
+    display:inline-block;
+    vertical-align:top;
+    margin-top:8px;
+}
+p.dns{
+    display:inline-block;
+    vertical-align:top;
+    color:rgb(47, 120, 202);
+    margin-top:14px;
+    font-size:14px;
+}
+p.small-text{
+    font-size:9px;
+}
+p.phone-number{
+    color:rgb(35, 176, 211);
+    font-weight:bold;
+    font-size:19px;
+    margin-top:2px;
+}
+img.phone{
+    width:35px;
+    margin-left:520px;
+}
+.contact{
+    display:inline-block;
+    margin-left:10px;
+}
+.line-separator{
+    height:1px;
+    border-bottom:1px solid black;
+    width:100%;
+    margin-top:10px;
+}
+p.title{
+    color:rgb(47, 120, 202);
+    margin:10px 0px 5px 0px;
+    font-weight:bold;
+}
+li{
+    margin-left:50px;
+    padding:3px;
+}
+img.serverClient{
+    width:250px;
+    display: block;
+    margin:10px auto
+}
+.theBigThree{
+    width:96%;
+    height:auto;
+    border-style: solid;
+    border-color:rgb(47, 120, 202);
+    border-width: 4px 4px 0px 4px;
+    padding:10px;
+    margin-top:20px;
+    box-shadow: 0px 5px white, 2px 2px 2px grey;
+}
+img.html{
+    width:100px;
+    display:inline-block;
+}
+p.bigThreeText{
+    color: rgb(47, 120, 202);
+    font-weight:bold;
+}
+.bottom-container{
+    display:inline-block;
+    width:600px;
+    vertical-align:top;
+    margin-left:20px;
+}
+p.main-text2{
+    font-size:13px;
+    margin-top:5px;
+}
+span.red{
+    color:red;
+}
+span.blue{
+    color:rgb(47, 120, 202)
+}
+span.teal{
+    color:rgb(35, 176, 211)
+}
+span.bold{
+    font-weight:bold;
+}
