@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>If You Don't Mind, Can I Have The Time?</title>
+    </head>
+    <body>
+        <script>
+            var HOUR = 5;
+            var MINUTE = 10;
+            var PERIOD = "PM";
+
+            if (MINUTE >= 50)
+            {
+                HOUR = HOUR + 1;
+                if (PERIOD == "AM")
+                {
+                    console.log("It's almost ", HOUR, " in the morning");
+                }
+            }
+
+            if (MINUTE <= 15)
+            {
+                if (PERIOD == "PM")
+                {
+                    console.log("It's just after ", HOUR, " in the evening");
+                }
+            }
+        </script>
+    </body>
+</html>
