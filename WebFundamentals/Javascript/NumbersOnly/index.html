@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Numbers Only</title>
+    </head>
+    <body>
+        <script>
+            //input array
+            //output: new array only with the items that are numbers
+            
+            function numbersOnly(arr) {
+                var newArray = [];
+                for (var i = 0; i < arr.length; i++) {
+                    if(typeof(arr[i]) === "number"){
+                        newArray.push(arr[i]);
+                    }
+                }
+                return newArray;
+            }
+            numbersOnly([1, "apple", -3, "orange", 0.5]);
+
+        </script>
+    </body>
+</html>
