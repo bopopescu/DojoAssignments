@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Random Chance</title>
+    </head>
+    <body>
+        <script>
+            function randomChance(numberOfQuarters){
+                var winningGame = Math.floor(Math.random()*100);
+                var winnings = Math.floor(Math.random()*50+50);
+
+                while (numberOfQuarters > 0){
+                    var result = Math.floor(Math.random()*100);
+                    if (result == winningGame) {
+                        numberOfQuarters = numberOfQuarters + winnings;
+                        break;
+                    }
+                    numberOfQuarters = numberOfQuarters - 1;
+                }
+                if (numberOfQuarters > 0) {
+                    return numberOfQuarters;
+                }
+                else {
+                    return 0;
+                }
+            }
+            randomChance(15);
+        </script>
+    </body>
+</html>
