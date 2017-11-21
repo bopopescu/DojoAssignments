@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Students and Instructors</title>
+    </head>
+    <body>
+        <script>
+            //we are given an array of objects
+            //each object has a first_name and last_name key
+            //make a program that outputs the value of each object
+
+            var students = [ 
+                {first_name: 'Michael', last_name: 'Jordan'}, //students[0]
+                {first_name: 'John', last_name: 'Rosales'}, //students[1]
+                {first_name: 'Mark', last_name: 'Guillen'}, //students[2]      
+                {first_name: 'KB', last_name: 'Tonel'}       //students[3]
+            ]
+
+            for (var i = 0; i < students.length; i++) {
+                console.log(students[i].first_name, students[i].last_name);
+            }
+
+        </script>
+    </body>
+</html>
