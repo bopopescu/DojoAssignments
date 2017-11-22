@@ -6,11 +6,21 @@
     </head>
     <body>
         <script>
-            var penny = .01;
+            /*var penny = .01;
             for (var day = 1; day <= 30; day++) {
                 penny = penny * 2;
             }
-            console.log(penny);
+            console.log(penny);*/
+
+            var earnings = .01;
+		    var amount = .01;
+		    for (var i = 1; i <= 30; i++) {
+			earnings = earnings * 2;
+            console.log(earnings);
+			amount = amount + earnings;
+			}
+            console.log(amount);
+
         </script>
     </body>
 </html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery Functions</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $('button.click').click(function(){
+                        alert("You clicked a button");
+                    });
+
+                    $('button.hide').click(function(){
+                        $('button.hide').hide();
+                    });
+                    
+                    $('button.show').click(function(){
+                        $('button.hide').show();
+                    });
+                    
+                    $('button.toggle').click(function(){
+                        $("img.monkeyEmoji").toggle();
+                    });
+
+                    $('img.downEmoji').hide(function(){
+                        $('button.slideDown').click(function(){
+                            $('img.downEmoji').slideDown();
+                        });
+                    });
+
+                    $('button.slideUp').click(function(){
+                        $('img.upEmoji').slideUp();
+                    });
+
+                    $('button.slideToggle').click(function(){
+                        $('img.sickEmoji').slideToggle();
+                    });
+
+                    $('img.ghostEmoji').hide(function(){
+                        $('button.fadeIn').click(function(){
+                            $('img.ghostEmoji').fadeIn();
+                        });
+                    });
+
+                    $('button.fadeOut').click(function(){
+                        $('img.byeEmoji').fadeOut();
+                    });
+
+                    $('button.addClass').click(function(){
+                        $('button.addClass').addClass("yellow");
+                    });
+
+                    $('button.before').click(function(){
+                        $("img.girlBowieEmoji").before('<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/apple/114/male-singer_1f468-200d-1f3a4.png" alt="Man Singer Emoji">');
+                    });
+
+                    $('button.after').click(function(){
+                        $("img.pregnantEmoji").after('<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/apple/114/breast-feeding_1f931.png" alt="Man Singer Emoji">');
+                    });
+
+                    $('button.append').click(function(){
+                        $("img.babyEmoji").after('<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/apple/114/older-man_1f474.png" alt="Old Man Emoji">');
+                    });
+
+                    $('button.html').click(function(){
+                        $(".html").html("Changed text");
+                    });
+
+                    $('button.attr').click(function(){
+                        $("img.muscleEmoji").attr("width", "40px");
+                    });
+
+                    $('button.val').click(function(){
+                        $("input:text").val("EMOJI EMOJI")
+                    });
+
+                    $('button.text').click(function(){
+                        $("button.text").text("Good job");
+                    })
+
+                    $('button.data1').click(function(){
+                        $("p").data("key", "This is the value");
+                        });
+                        $("button.data2").click(function(){
+                            alert($("p").data("key"));
+                        });
+                });
+            </script>
+
+        <div class="container">
+            <div class="box">
+                Click
+                <button class="click">Click Me</button>
+            </div>
+            <div class="box">
+                Hide 
+                <button class="hide">Click Me</button> 
+            </div>
+            <div class="box">
+                Show
+                <button class="show">Click Me</button> 
+            </div>
+            <div class="box">
+                Toggle
+                <button class="toggle">Click Me</button> 
+                <img class="monkeyEmoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/114/see-no-evil-monkey_1f648.png" alt="Hiding Monkey emoji">  
+            </div>
+            <div class="box">
+                SlideDown  
+                <button class="slideDown">Click Me</button> 
+                <img class="downEmoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/apple/114/upside-down-face_1f643.png" alt="Upside Down Emoji">
+            </div>
+            <div class="box">
+                SlideUp
+                <button class="slideUp">Click Me</button>
+                <img class="upEmoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/apple/114/face-with-rolling-eyes_1f644.png" alt="Rolling Eyes Emoji">  
+            </div>
+            <div class="box">
+                SlideToggle  
+                <button class="slideToggle">Click Me</button>  
+                <img class="sickEmoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/apple/114/nauseated-face_1f922.png" alt="Sick Emoji"> 
+            </div>
+            <div class="box">
+                FadeIn
+                <button class="fadeIn">Click Me</button>
+                <img class="ghostEmoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/apple/114/ghost_1f47b.png" alt="Ghost Emoji">
+            </div>
+            <div class="box">
+                FadeOut
+                <button class="fadeOut">Click Me</button>
+                <img class="byeEmoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/apple/114/happy-person-raising-one-hand_1f64b.png" alt="Surprise Emoji">
+            </div>
+            <div class="box">
+                AddClass
+                <button class="addClass">Click Me</button>   
+            </div>
+            <div class="box">
+                Before
+                <button class="before">Click Me</button>
+                <img class="girlBowieEmoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/apple/114/female-singer_1f469-200d-1f3a4.png" alt="Girl Bowie Emoji">
+            </div>
+            <div class="box">
+                After  
+                <button class="after">Click Me</button>
+                <img class="pregnantEmoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/apple/114/pregnant-woman_1f930.png" alt="Pregnant Emoji">
+            </div>
+            <div class="box">
+                Append
+                <button class="append">Click Me</button>
+                <img class="babyEmoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/apple/114/baby_1f476.png" alt="Baby Emoji">
+            </div>
+            <div class="box">
+                HTML
+                <p class="html">Example text</p>
+                <button class="html">Click Me</button>
+            </div>
+            <div class="box">
+                Attr    
+                <button class="attr">Click Me</button>
+                <img class="muscleEmoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/144/apple/114/flexed-biceps_1f4aa.png" alt="Muscle Emoji">
+            </div>
+            <div class="box">
+                Val  
+                <button class="val">Click Me</button>
+                <input type="text" value="None specified">
+            </div>
+            <div class="box">
+                Text 
+                <button class="text">Click Me</button>
+            </div>
+            <div class="box">
+                Data   
+                <button class="data1">Click Me</button>
+                <button class="data2">Click Me</button>
+            </div>
+        </div>
+        <p></p>
+    </body>
+</html>
