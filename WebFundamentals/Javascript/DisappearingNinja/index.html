@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Disappearing Ninja</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    
+                    $('img').click(function(){
+                        $(this).hide();
+                    });
+
+                    $('button').click(function(){
+                        $('img').show();
+                    });
+                });
+            </script>
+        <div class="wrapper">
+            <img src="http://78.media.tumblr.com/1084e6b25bdeb7edfd6596275bd07f79/tumblr_o8swk2ZKq01qbvbaao1_1280.jpg" alt="Orange Illustration">
+            <img src="http://78.media.tumblr.com/545e6303fa74e30e74f4083ec1e060ad/tumblr_oqc7qx5bAK1qbvbaao1_r1_1280.jpg" alt="Profile Illustration">
+            <img src="http://78.media.tumblr.com/ac6a38d48e62619d3da220bc441fbedb/tumblr_opijc3DYpD1qbvbaao1_1280.jpg" alt="Abstract Eyes">
+            <img src="http://78.media.tumblr.com/b8c259d1b97874efe770c03241f7d67c/tumblr_opgz7hwcHt1qbvbaao1_1280.jpg" alt="Heart">
+            <img src="http://78.media.tumblr.com/b9fb43e0de911a21723c6a3e75692ca5/tumblr_opeh19mEWv1qbvbaao1_1280.jpg" alt="Soda and Strawberry">
+            <img src="http://78.media.tumblr.com/9a43e7775ab7dd10b79caecc179dfdec/tumblr_opcuwuGDOG1qbvbaao1_1280.jpg" alt="Bird">
+            <img src="http://78.media.tumblr.com/6a7a327493f2d38385a8772de6bb23f9/tumblr_opbbus37Lw1qbvbaao1_1280.jpg" alt="Flowers">
+            <img src="http://78.media.tumblr.com/8fc65340c154f69a0e118317c77781c5/tumblr_op1l4aFTbi1qbvbaao1_1280.jpg" alt="Butterfly">
+            <button>Restore</button>
+        </div>
+    </body>
+</html>

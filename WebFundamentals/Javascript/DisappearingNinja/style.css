@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   }
+
+   .wrapper{
+       width:1000px;
+   }
+   img{
+       width:200px;
+       height:200px;
+       margin:10px;
+   }
+   button{
+       display:block;
+       margin:20px auto;
+       padding:5px 15px;
+   }
