@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Users</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Contact #</th>
+            </tr>
+        </table>
+
+        <h2>Sign Up!</h2>
+        <div class="form_wrapper">
+            <form action="process.php" method="post">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name">
+
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name">
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+
+                <label for="phone_number">Phone Number:</label>
+                <input type="test" id="phone_number" name="phone_number">
+
+                <input type="submit" value="Register">
+            </form>
+        </div>
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            
+                $('form').submit(function(){
+                    alert('You are registered!');
+                    return false;
+                });
+
+            });
+        </script>
+    </body>
+</html>

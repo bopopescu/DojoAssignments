@@ -1,0 +1,30 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+table, h2{
+    margin:20px;
+}
+
+table{
+    border:1px solid black;
+}
+
+th{
+    padding:10px;
+}
+
+form{
+    margin-top:20px;
+    text-align:right;
+}
+
+label, input{
+    display:inline-block;
+    margin:10px;
+}
+
+.form_wrapper{
+    width:300px;
+}
