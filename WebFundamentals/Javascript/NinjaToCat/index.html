@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ninja to Cat</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+
+                    $('img').click(function(){
+                        //var temp = orig image
+                        //src = data-alt-src
+                        //data-alt-src = temp
+
+                        //of clicked image, sets value of its temp to the image you clicked
+                        $(this).attr('temp', $(this).attr('src'));
+                        //for the image you click, sets the value of src to the image's data-alt-src
+                        $(this).attr('src', $(this).attr('data-alt-src'));
+                        //for image you click, sets value of data-alt-src to the value of temp
+                        $(this).attr('data-alt-src', $(this).attr('temp'));
+
+                    });
+                });
+            </script>
+            
+            <div class="container">
+                <img src="img/cat0.png" data-alt-src="img/ninja0.png" temp="">
+                <img src="img/cat1.png" data-alt-src="img/ninja1.png" temp="">
+                <img src="img/cat2.png" data-alt-src="img/ninja2.png" temp="">
+                <img src="img/cat3.png" data-alt-src="img/ninja3.png" temp="">
+                <img src="img/cat4.png" data-alt-src="img/ninja4.png" temp="">
+            </div>
+            
+    </body>
+</html>
