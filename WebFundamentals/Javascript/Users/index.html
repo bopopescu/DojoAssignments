@@ -37,9 +37,13 @@
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
-            
+                //syntax! $("input[id=name]").val();
                 $('form').submit(function(){
-                    alert('You are registered!');
+                    $('table').append('<tr><td>' + $('input[name="first_name"]').val() + '</td><td>'
+                    + $('input[name="last_name"]').val() + '</td><td>'
+                    + $('input[name="email"]').val() + '</td><td>'
+                    + $('input[name="phone_number"]').val() + '</td></tr>'
+                    );
                     return false;
                 });
 
