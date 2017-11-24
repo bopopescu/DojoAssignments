@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Contact Card</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="formInfo">
+            <form action="process.php" method="post">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name">
+
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name">
+
+                <label for="description">Description:</label>
+                <textarea name="description" id="description"></textarea>
+
+                <input type="submit" value="Add User">
+            </form>
+        </div>
+        <div class="newCard">
+            
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script>
+
+                $(document).ready(function(){
+
+                    $('form').submit(function(){
+                        $('.newCard').append('<div class="card">' + '<h2>' + $('#first_name').val()
+                        + " " + $('#last_name').val() + '</h2>' 
+                        + '<p class="description">Click for Description!</p>' + '</div>');
+                        return false;
+                    });
+
+                    $(document).on('click', 'p.description', function(){
+                        $(this).parent().text($('#description').val());
+                    });
+
+                });
+            </script>
+    </body>
+</html>

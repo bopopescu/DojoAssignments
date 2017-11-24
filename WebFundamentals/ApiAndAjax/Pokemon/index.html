@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Pokemon</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="pokemonBox">
+            
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script>
+
+                $(document).ready(function(){
+
+                    for (var i = 1; i <= 151; i++){
+                        $(".pokemonBox").append("<img src='http://pokeapi.co/media/sprites/pokemon/" + i + ".png'>");
+                    }
+
+                    //http://pokeapi.co/media/sprites/pokemon/12.png
+                    //var pokeURL2 = "http://pokeapi.co/api/v2/pokemon/" + param;
+
+                    /*$(document).ready(function(){
+                        for(i = 1; i <=151; i ++){  
+                            $("#pokemon").append("<img id=pokepic" + i + "src='http://pokeapi.co/media/img/" + i + ".png'>");  */ 
+                    
+               
+                });
+            </script>
+    </body>
+</html>
