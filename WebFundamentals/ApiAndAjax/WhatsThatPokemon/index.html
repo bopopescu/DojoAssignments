@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Pokemon</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="pokemonBox">
+            
+        </div>
+
+        <div class="pokedex">
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script>
+
+                $(document).ready(function(){
+
+                    //for loop that adds all images and adds id number
+                    for (var i = 1; i <= 151; i++){
+                        var pokemonURL = "<img src='http://pokeapi.co/media/sprites/pokemon/" + i + ".png' id=" + "'" + i + "'" + ">";
+                        $(".pokemonBox").append(pokemonURL);
+                    } 
+                    
+
+                    //name of pokemon
+                    $(document).on('click', 'img', function(){       
+                        var id = this.id;
+                        $.get("https://pokeapi.co/api/v2/pokemon/" + id, function(res) {
+                            var stats = "";
+                            stats += "<h3>" + (res.name) + "</h3>";
+                            stats += "<img src='http://pokeapi.co/media/sprites/pokemon/" + id + ".png' id=" + "'" + id + "'" + ">";
+                            for(var j = 0; j < res.types.length; j++){
+                                stats += "<p>Type: " + (res.types[j].type.name) + "</p>";
+                            }
+                            stats += "<p>Height: " + (res.height) + "</p>";
+                            stats += "<p>Weight: " + (res.weight) + "</p>";
+                            
+                            $('.pokedex').html(stats);
+                            }, 'json');
+                    });
+                });
+            </script>
+    </body>
+</html>
