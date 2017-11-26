@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Your Very Own Weather Forecast App</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <form action="process.php" method="post">
+
+            <textarea name="city" id="city"></textarea>
+            <input type="submit" value="Search Weather">
+        </form>
+
+        <div class="weatherDisplay">
+            <h4></h4>
+            <p></p>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script>
+
+                $(document).ready(function(){ 
+                    //var city = $('#city').val();
+                    var key = 'cb3504a8c159eef77586497ca2b81536';
+                    $('form').submit(function(){
+                        $.get("http://api.openweathermap.org/data/2.5/weather?q=" + $('#city').val() + "&units=imperial&&appid=" + key, function(res) {
+                            $('h4').text($('#city').val());
+                            $('p').text("Temperature: " + (res.main.temp));
+                        }, 'json');
+
+                        /*$.get("http://api.openweathermap.org/data/2.5/weather?q=London,uk&&appid=cb3504a8c159eef77586497ca2b81536", function(res) {
+                            console.log(res);
+                        }, 'json');*/
+
+                        return false;
+                    });
+                  
+                });
+            </script>
+    </body>
+</html>
