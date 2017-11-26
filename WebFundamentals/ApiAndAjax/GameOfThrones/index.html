@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Game of Thrones</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <img id="362" src="gameofthrones/stark.jpg" alt="House Stark">
+            <img id="378" src="gameofthrones/targaryen.jpg" alt="House Targaryen">
+            <img id="229" src="gameofthrones/lannister.jpg" alt="House Lannister">
+            <img id="17" src="gameofthrones/baratheon.png" alt="House Baratheon">
+            <div class="info">
+
+            </div>
+
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script>
+
+                $(document).ready(function(){ 
+                    $('img').click(function(){
+                        var id = this.id;
+                        $.get("https://www.anapioficeandfire.com/api/houses/" + id, function(res){
+                            var info = "";
+                            info += "<p>Name: " + (res.name) + "</p>";
+                            info += "<p>Words: " + (res.words) + "</p>";
+                            for(var i = 0; i < res.titles.length; i++){
+                                info += "<p>Title: " + (res.titles[i]) + "</p>";
+                            }
+                            $('.info').html(info);
+                        }, 'json');
+                    });
+                });
+            </script>
+    </body>
+</html>
