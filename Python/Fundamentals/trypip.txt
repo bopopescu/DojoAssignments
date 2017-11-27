@@ -1,0 +1,69 @@
+1. pip install Django
+
+Installs Django using a pip installer.
+
+The output of the command - It looks for a certain version of Django saved, and looks for the requirements it needs. It lets us know the status of the installation, and what exactly is being installed, and then reports when it if finished, along with the version.
+
+Collecting Django
+  Using cached Django-1.11.7-py2.py3-none-any.whl
+Requirement already satisfied: pytz in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from Django)
+Installing collected packages: Django
+Successfully installed Django-1.11.7
+
+2. pip list
+
+This outputs the list of installed packages
+
+The output of the command gives us a list of installed packages and their versions, along with information about how the format will change in the future. 
+
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+Django (1.11.7)
+pip (9.0.1)
+pytz (2017.3)
+setuptools (28.8.0)
+
+3. pip install Django
+
+This will attempt to install Django.
+
+The output of the command says that the requirements for the installation are already satisfied, so there is no need for an installation. 
+
+Requirement already satisfied: Django in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages
+Requirement already satisfied: pytz in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from Django)
+
+4. pip Freeze
+
+pip Freeze gives us the standard requirement format that we could use with pip to install requirements from.
+
+Django==1.11.7
+pytz==2017.3
+
+5. pip freeze > requirements.txt
+
+using “ls” - This command shows me all the files or folders I have on my desktop.
+Inside the file it shows me: “Django==1.11.7
+pytz==2017.3”
+
+
+Coding Dojo Exams				jquerytext.html
+DojoAssignments					new_project
+GitHubRepoAssignment				novCohort2017
+Screen Shot 2017-11-15 at 2.38.36 PM.png	requirements.txt
+Screen Shot 2017-11-18 at 10.05.28 AM.png	test
+gittest
+
+6. pip uninstall Django
+
+This command uninstalls Django
+
+The output shows all the files that will be removed. And confirmation when it has been successfully uninstalled.
+
+7. pip show Django
+
+This command would show if Django was installed.
+
+The output showed nothing for me since I uninstalled it.
+
+8. pip search Flask
+
+This shows output of all packages that have Flask in them and their description.
