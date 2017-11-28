@@ -18,6 +18,6 @@ print newList
 x = [19,2,54,-2,7,12,98,32,10,-3,6]
 
 x.sort()
-firstHalf = firstHalf = x[0:len(x)/2]
+firstHalf = x[0:len(x)/2]
 x[0:len(x)/2] = [firstHalf]
 print x
