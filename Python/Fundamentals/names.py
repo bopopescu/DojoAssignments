@@ -1,4 +1,4 @@
-"""def players():
+def players():
     students = [
         {'first_name':  'Michael', 'last_name' : 'Jordan'},
         {'first_name' : 'John', 'last_name' : 'Rosales'},
@@ -9,7 +9,7 @@
     for value in students:
         print value['first_name'],value['last_name']
 
-players()"""
+players()
 
 
 def basketball():
@@ -27,10 +27,11 @@ def basketball():
     ]
     }
 
-    for data in users:
-        print data
-        for value in users.itervalues():
-            for value in 'Students':
-                print value['first_name'],value['last_name']
-
+    for keys, data in users.items():
+        print keys
+        counter = 0
+        for value in data:
+            counter = counter + 1
+            print counter, "-", value['first_name'],value['last_name'], "-", len(value['first_name'])+len(value['last_name'])
+        
 basketball()
