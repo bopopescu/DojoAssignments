@@ -22,7 +22,7 @@ class Product(object):
             self.status = "for sale"
         elif reason == "opened":
             self.status = "used"
-            self.price -= self.price * .02
+            self.price -= round(self.price * .02,2)
         return self
 
     def display_info(self):
