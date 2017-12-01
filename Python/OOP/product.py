@@ -31,4 +31,5 @@ class Product(object):
 item = Product(5, "apple", 1, "whole foods", "for sale")
 item.sell().add_tax(.08).return_reason("opened")
 
+
 print item.display_info()
