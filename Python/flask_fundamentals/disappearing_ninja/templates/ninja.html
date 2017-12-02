@@ -1,0 +1,29 @@
+<html>
+		<head>
+		   <title>TMNT</title>
+		   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		</head>
+		<body>
+			{% if show_all == True %}
+			<img src="{{ url_for('static', filename='images/donatello.jpg')}}">
+			<img src="{{ url_for('static', filename='images/leonardo.jpg')}}">
+			<img src="{{ url_for('static', filename='images/michelangelo.jpg')}}">
+			<img src="{{ url_for('static', filename='images/raphael.jpg')}}">
+			{% endif %}
+
+			{% if show_all == False %}
+				{% if ninja_color == 'purple' %}
+				<img src="{{ url_for('static', filename='images/donatello.jpg')}}">
+				{% elif ninja_color == 'blue' %}
+				<img src="{{ url_for('static', filename='images/leonardo.jpg')}}">
+				{% elif ninja_color == 'orange' %}
+				<img src="{{ url_for('static', filename='images/michelangelo.jpg')}}">
+				{% elif ninja_color == 'red' %}
+				<img src="{{ url_for('static', filename='images/raphael.jpg')}}">
+				{% else %}
+				<img src="{{ url_for('static', filename='images/notapril.jpg')}}">
+				{% endif %}
+			{% endif %}
+			
+		</body>
+	</html>
