@@ -1,0 +1,42 @@
+.top, .top2, .resetButton{
+	display:inline-block;
+	vertical-align:middle;
+	margin:10px;
+}
+.top2{
+	width:150px;
+	height:20px;
+	border:1px solid black;
+	padding:5px;
+}
+.boxes{
+	width:175px;
+	height:150px;
+	display:inline-block;
+	vertical-align:top;
+	background: gray;
+	text-align:center;
+	padding:15px;
+	margin:10px;
+}
+
+form.box{
+	margin-top:30px;
+}
+
+#activities{
+	margin:10px;
+}
+.activity_log{
+	width: 875px;
+	height: 200px;
+	border: 1px solid black;
+	margin:10px;
+	padding:5px;
+	overflow: scroll;
+}
+
+.text{
+	width:370px;
+	display:block;
+}
