@@ -1,0 +1,121 @@
+SELECT * 
+FROM users;
+
+SELECT * 
+FROM faves;
+
+SELECT * 
+FROM follows;
+
+SELECT *
+FROM tweets;
+
+SELECT first_name
+FROM users;
+
+SELECT first_name, last_name
+FROM users;
+
+SELECT first_name
+FROM users
+WHERE id = 2;
+
+SELECT last_name
+FROM users
+WHERE id = 1;
+
+SELECT last_name
+FROM users
+WHERE id = 2 or id = 3;
+
+SELECT * 
+FROM users
+WHERE id > 2;
+
+SELECT *
+FROM users
+WHERE id <= 3;
+
+SELECT *
+FROM users
+WHERE first_name LIKE "K%";
+
+SELECT *
+FROM users
+ORDER BY birthday ASC;
+
+SELECT *
+FROM users
+WHERE first_name LIKE "%e"
+ORDER BY birthday DESC;
+
+SELECT first_name
+FROM users
+ORDER BY first_name;
+
+INSERT INTO tweets (tweet, user_id, created_at, updated_at)
+VALUES ("hello", 1, NOW(), NOW());
+
+UPDATE tweets SET
+tweet = "HI"
+where id = 16;
+
+DELETE FROM tweets
+WHERE id = 20;
+
+SELECT CONCAT('Mr.', ' ', first_name, ' ', last_name) AS full_name
+FROM users;
+
+SELECT CONCAT_WS(' ', 'Mr.', first_name, last_name) AS full_name
+FROM users;
+
+SELECT LENGTH(last_name) AS last_len FROM users;
+
+SELECT LOWER(first_name) AS first_lowercase FROM users;
+
+SELECT HOUR(created_at) AS date_hour, created_at FROM users;
+
+SELECT DAYNAME(created_at) AS date_hour, created_at FROM users;
+
+SELECT MONTH(created_at) AS month_number, created_at FROM users;
+
+SELECT DATE_FORMAT(created_at, '%W %M %e %Y') FROM users;
+
+SELECT users.first_name, users.last_name, tweets.tweet, tweets.created_at
+FROM users
+JOIN tweets ON users.id = tweets.user_id;
+
+SELECT tweets.tweet as kobe_tweets
+FROM users
+LEFT JOIN tweets 
+ON users.id = tweets.user_id
+WHERE users.id = 1;
+
+SELECT tweet as id2_favtweets
+FROM users
+LEFT JOIN faves
+ON users.id = faves.user_id
+LEFT JOIN tweets
+ON faves.tweet_id = tweets.id
+WHERE users.id = 2;
+
+SELECT tweet as id2or1_favtweets
+FROM users
+LEFT JOIN faves
+ON users.id = faves.user_id
+LEFT JOIN tweets
+ON faves.tweet_id = tweets.id
+WHERE users.id = 2 OR users.id = 2;
+
+SELECT users2.first_name as follower
+FROM users
+LEFT JOIN follows
+ON users.id = follows.followed_id
+LEFT JOIN users as users2
+ON users2.id = follows.follower_id
+WHERE users.id = 1;
+
+SELECT first_name, tweet
+FROM users
+LEFT JOIN tweets
+ON users.id = tweets.user_id

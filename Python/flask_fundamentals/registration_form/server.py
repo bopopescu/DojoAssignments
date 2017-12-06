@@ -10,35 +10,32 @@ def user_form():
 
 @app.route('/results', methods = ['POST'])
 def create_user_info():
+	errors = False
+
 	email = request.form['email']
 	first_name = request.form['first_name']
 	last_name = request.form['last_name']
 	password = request.form['password']
 	confirm_password = request.form['confirm_password']
 
-	if len(email) < 1:
-		flash("Email cannot be empty!")
-		return redirect('/')
-	elif not EMAIL_REGEX.match(email):
-		flash("Invalid Email Address!")
-		return redirect('/')
-	if len(first_name) < 1:
-		flash("First name cannot be empty!")
-		return redirect('/')
-	if len(last_name) < 1:
-		flash("Last name cannot be empty!")
-		return redirect('/')
+	if len(email) < 1 or len(first_name) < 1 or len(last_name) < 1 or len(password) < 1 or len(confirm_password) < 1:
+		flash("Fields cannot be empty!")
+		errors = True
+	if not EMAIL_REGEX.match(email):
+		flash("Invalid Email Address")
+	if not first_name.isalpha() or not last_name.isalpha():
+		flash("First/last name has a non-alpha character")
+		error = True
 	if len(password) < 8:
-		flash("Your password is too short")
-		return redirect('/')
-	if len(confirm_password) < 8:
-		flash("Your password is too short")
-		return redirect('/')
+		flash("Password is too short")
+		errors = True
 	if password != confirm_password:
-		flash("Your passwords don't match")
-		return redirect('/')
+		flash("Passwords don't match")
+		errors = True
 
-	return redirect('/results')
+	if errors == False:
+		flash('Success!')
 
+	return redirect('/')
 
 app.run(debug=True)
