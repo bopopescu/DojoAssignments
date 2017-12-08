@@ -25,7 +25,7 @@ def create_user_info():
 		flash("Invalid Email Address")
 	if not first_name.isalpha() or not last_name.isalpha():
 		flash("First/last name has a non-alpha character")
-		error = True
+		errors = True
 	if len(password) < 8:
 		flash("Password is too short")
 		errors = True

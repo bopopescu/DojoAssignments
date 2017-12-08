@@ -1,0 +1,21 @@
+sqlalchemy.exc.OperationalError
+OperationalError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' (61)")
+
+Fix: Make sure that port is correct.
+
+
+sqlalchemy.exc.OperationalError
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+Fix: Ensure that correct password is entered in config.
+
+
+sqlalchemy.exc.OperationalError
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user ' '@'localhost' (using password: YES)")
+
+Fix: Make sure that correct user is entered in config.
+
+
+ValueError: invalid literal for int() with base 10: ''
+
+Fix: port in config is empty
