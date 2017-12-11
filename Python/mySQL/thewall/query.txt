@@ -1,0 +1,14 @@
+TO GET all messages
+
+SELECT messages.message
+FROM messages
+
+
+
+TO GET USER'S NAME & MESSAGE POST DATE/TIME:
+
+SELECT users.first_name, users.last_name, messages.created_at
+FROM users
+JOIN messages
+ON users.id = messages.user_id
+WHERE users.id = 2;

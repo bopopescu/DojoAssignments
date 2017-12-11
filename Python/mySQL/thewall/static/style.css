@@ -1,0 +1,117 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+/* CSS FOR INDEX.HTML */
+
+.wrapper{
+	width:900px;
+}
+.register, .login{
+	display: inline-block;
+	vertical-align:top;
+	background:rgb(206, 232, 253);
+	margin: 30px;
+	padding: 20px;
+	border: 1px solid black;
+}
+.heading{
+	margin-bottom:10px;
+}
+.alerts{
+	display: inline-block;
+	vertical-align:top;
+	margin-top:30px;
+}
+.index_flash{
+	color:red;
+}
+
+.login_reg{
+	margin-bottom:5px;
+}
+
+/* CSS FOR WALL.HTML */
+
+.header{
+	border: 1px solid black;
+	width:810px;
+	height: 25px;
+	padding:10px;
+	vertical-align:top;
+}
+h2.codingdojo, p.welcome, .log_off{
+	display:inline-block;
+	/* vertical-align:top; */
+}
+h2.codingdojo{
+	margin-right:440px;
+}
+p.welcome{
+	margin-right:10px;
+}
+.container{
+	width:732px;
+	padding:30px 50px;
+	background:rgb(206, 232, 253);
+	
+}
+.post_text{
+	margin-bottom:5px;
+	display:inline-block;
+}
+.flash_message{
+	display:inline-block;
+	color:red;
+	margin-left:390px;
+}
+textarea{
+	width:715px;
+	height:100px;
+	overflow:scroll;
+	margin:0px 0px 10px 10px;
+}
+textarea.comment_to_post{
+	width:500px;
+	height:75px;
+	overflow:scroll;
+}
+.flash_and_button{
+	width:700px;
+	text-align:right;
+}
+.message_button{
+	display:inline-block;
+	vertical-align:top;
+	margin-bottom: 20px;
+}
+.main{
+	width:732px;
+	background:green;
+	padding:0px 50px;
+}
+.message_title{
+	margin-bottom:10px;
+}
+.message_text{
+	margin-left:10px;
+	margin-bottom:20px;
+}
+.comment_box{
+	margin-left:215px;
+	display:block;
+}
+.comment_button{
+	display:inline-block;
+	vertical-align:top;
+	margin: 0px 0px 20px 390px;
+}
+.comment_title{
+	margin-bottom:5px;
+	margin-left:150px;
+}
+.comment_text{
+	margin-left:160px;
+	margin-bottom:20px;
+}

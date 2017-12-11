@@ -1,0 +1,69 @@
+<html>
+		<head>
+		   <title>The Wall</title>
+		   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		   <!-- <link rel="stylesheet" type="text/css" href="../static/style.css"> -->
+		</head>
+		<body>
+			<div class="header">
+				<h2 class="codingdojo">CodingDojo Wall</h2>
+				{% for name in all_names: %}	
+					<p class="welcome">Welcome {{ session['user_name'] }}</p>
+				{% endfor %}
+				<form action='/log_out' method='POST' class="log_off">
+					<input type='submit' value='log_off'>
+				</form>
+			</div>
+			<div class="container">
+				<h3 class="post_text">Post a message</h3>
+				<!-- flash messages here -->
+				{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					{% for message in messages %}
+					<h3 class="flash_message">{{message}}</h3>
+					{% endfor %}
+				{% endif %}
+				{% endwith %}
+
+				<!-- post a message here -->
+				<form action="/post_message" method="POST">
+				<textarea name ="message_to_post"></textarea>
+				<div class="flash_and_button">
+					<input type="submit" value="Post a message" class="message_button">
+					</form>
+				</div>
+					
+					<!-- list all messages -->
+					{% for message in all_messages: %}	
+						<h4 class="message_title">{{ message['first_name'] }} {{ message['last_name'] }} - {{ message['created_at'] }}</h4>
+						<p class="message_text">{{ message['message'] }}</p>
+
+					<!-- list appropriate comment/s for each message -->
+
+					{% for comment in all_comments: %}
+						{% if message['id'] == comment["message_id"] %}
+							<h4 class="comment_title">{{ comment['first_name']}} {{ comment['last_name'] }} - {{ comment['created_at'] }}</h4>
+							<p class="comment_text">{{ comment['comment'] }}</p>
+						{% endif %}
+					{% endfor %}
+
+						<!-- <h4 class="comment_title">Commenter - Commenter Date/Time</h4>
+						<p class="comment_text">Comment goes here</p> -->
+
+						<!-- post a comment here -->
+						<form action="/post_comment/{{ message['id'] }}" method="POST" class="comment_box">
+							<textarea class="comment_to_post" name ="comment_to_post"></textarea>
+							<input type="submit" value="Post a comment" class="comment_button">
+						</form>
+					{% endfor %}
+			
+			</div>
+
+			
+
+			
+			
+
+			
+		</body>
+	</html>
