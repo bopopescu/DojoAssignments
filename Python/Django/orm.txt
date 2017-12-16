@@ -1,0 +1,13 @@
+User.objects.all()
+User.objects.last()
+User.objects.create(first_name="Arya", last_name="Stark", email_address="got@got.got", age="17")
+User.objects.create(first_name="Frank", last_name="Castle", email_address="punisher@netflix.com", age="36")
+User.objects.create(first_name="Diana", last_name="Prince", email_address="wonder@woman.com", age="23")
+User.objects.create(first_name="Princess", last_name="Buttercup", email_address="princess@bride.com", age="21")
+User.objects.first()
+User.objects.order_by("-first_name")
+b = User.objects.get(id=3)
+b.last_name = "Lieberman"
+b.save()
+b = User.objects.get(id=4)
+b.delete()

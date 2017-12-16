@@ -1,0 +1,39 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+.wrapper{
+	width:900px;
+	padding:15px;
+}
+.add_word{
+	width:230px;
+	display:inline-block;
+	vertical-align:top;
+	padding:10px;
+	border-right: 2px solid black;
+}
+.list_word{
+	width:400px;
+	display:inline-block;
+	vertical-align:top;
+	padding:10px;
+	margin-left:20px;
+}
+.red, .red2{
+	color:red;
+}
+.green, .green2{
+	color:green;
+}
+.blue, .blue2{
+	color:blue;
+}
+.red2, .green2, .blue2{
+	font-size:25px;
+}
+.big{
+	font-size: 25px;
+}
+	

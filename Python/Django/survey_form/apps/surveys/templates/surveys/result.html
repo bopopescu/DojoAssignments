@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Survey Form</title>
+</head>
+<body>
+	<p>Submitted Information</p>
+	<p>Name: {{ request.session.name }}</p>
+	<p>Dojo Location: {{ request.session.location }}</p>
+	<p>Favorite Language: {{ request.session.language }}</p>
+	<p>Comment: {{ request.session.comment }}</p>
+	<p>You've submitted this form {{ request.session.counter }} times.</p>
+
+	<form action="/return" method="post">
+		{% csrf_token %}
+		<p><input type="submit" value="Go Back"></p>
+	</form>
+</body>
+</html>

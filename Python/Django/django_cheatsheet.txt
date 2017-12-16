@@ -1,0 +1,51 @@
+1. Go to myEnvironments
+2. TERMINAL - source djangoEnv/bin/activate
+3. Navigate to directory where you want to create project
+4. django-admin startproject <projectname>
+5. CD <projectname>
+6. MKDIR apps
+7. CD apps
+8. touch __init__.py
+9. python ../manage.py startapp <appname>
+10. Open settings.py
+	- In INSTALLED APPS, add: 'apps.<appname>', 
+
+11. Open urls.py
+from django.conf.urls import url, include
+from django.contrib import admin
+
+urlpatterns = [
+	url(r'^', include('apps.<appname>.urls'))
+
+12. TERMINAL - CD into apps/<appname>
+13. touch urls.py
+
+14. Open new urls.py (in app)
+from django.conf.urls import url
+from . import views
+urlpatterns = [
+	url(r'^$', views.index)
+]
+
+15. Open views.py
+from django.shortcuts import render, HttpResponse, redirect
+
+def index(request):
+	response = "Hello"
+	return HttpResponse(response)
+
+
+
+TO USE SESSION:
+
+TERMINAL: 
+python manage.py makemigrations
+python manage.py migrate
+
+
+TO RUN SERVER:
+python manage.py runserver
+
+TO OPEN DJANGO SHELL:
+python manage.py shell
+from apps.{{app_name}}.models import *

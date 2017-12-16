@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Session Words</title>
+		{% load static %}
+	<link rel="stylesheet" href="{% static 'session_words/style.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="add_word">
+			<h2>Add a new word</h2>
+			<form action="create" method="post">
+				{% csrf_token %}
+				<p><textarea name="word"></textarea></p>
+				<p>Choose color</p>
+				<p><input type="radio" name="color" value="red">Red</p>
+				<p><input type="radio" name="color" value="green">Green</p>
+				<p><input type="radio" name="color" value="blue">Blue</p>
+				<p><input type="checkbox" name="show-big"> show in BIG fonts!</p>
+				<p><input type="submit" value="Add to Session"></p>
+			</form>
+		</div>
+
+		<div class="list_word">
+			<form action="clear" method="post">
+				{% csrf_token %}
+				<p><input type="submit" value="Clear Session"></p>
+			</form>
+
+			{% if request.session.words %}
+			{% for word in request.session.words %}
+			<p><span style="color:{{ word.color }}" class="{{ word.big }}">{{word.word}}</span> - added on {{ word.created_at }}</p>
+			{% endfor %}
+			{% endif %}
+
+				<!-- {% for word in request.session.words %}
+					{% if request.session.big == '' %}
+						{% if request.session.color == 'red' %}
+							<p><span class="red">{{ request.session.word }}</span> - added on {{ request.session.time }}</p>
+						{% elif request.session.color == 'green' %}
+							<p><span class="green">{{ request.session.word }}</span> - added on {{ request.session.time }}</p>
+						{% elif request.session.color == 'blue' %}
+							<p><span class="blue">{{ request.session.word }}</span> - added on {{ request.session.time }}</p>
+						{% endif %}
+					{% elif request.session.big == 'on' %}
+						{% if request.session.color == 'red' %}
+							<p><span class="red2">{{ request.session.word }}</span> - added on {{ request.session.time }}</p>
+						{% elif request.session.color == 'green' %}
+							<p><span class="green2">{{ request.session.word }}</span> - added on {{ request.session.time }}</p>
+						{% elif request.session.color == 'blue' %}
+							<p><span class="blue2">{{ request.session.word }}</span> - added on {{ request.session.time }}</p>
+						{% endif %}
+					{% endif %}
+				{% endfor %} -->
+
+
+		</div>
+
+	</div>
+</body>
+</html>

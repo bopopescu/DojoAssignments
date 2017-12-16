@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Amadon</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'first_app/style.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+	<div class="container">
+		<h1 class="header">Amadon Store!</h1>
+		<table>
+			<thead>
+				<tr class="gray">
+					<th>Item</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tr>
+				<form action="buy" method="post">
+					<td class="pink">Dojo Tshirt</td>
+					<td class="pink">$19.99</td>
+					<td class="pink">
+						<select name="quantity">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</td>
+					<td class="pink">
+						<input type="submit" value="Buy">
+					</td>
+				</form>
+			</tr>
+			<tr>
+				<form action="buy" method="post">
+					<td class="pink">Dojo Sweater</td>
+					<td class="pink">$29.99</td>
+					<td class="pink">
+						<select name="quantity">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</td>
+					<td class="pink">
+						<input type="submit" value="Buy">
+					</td>
+				</form>
+			</tr>
+			<tr>
+				<form action="buy" method="post">
+					<td class="pink">Dojo Cup</td>
+					<td class="pink">$4.99</td>
+					<td class="pink">
+						<select name="quantity">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</td>
+					<td class="pink">
+						<input type="submit" value="Buy">
+					</td>
+				</form>
+			</tr>
+			<tr>
+				<form action="buy" method="post">
+					<td class="pink">Algorithm Book</td>
+					<td class="pink">$49.99</td>
+					<td class="pink">
+						<select name="quantity">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</td>
+					<td class="pink">
+						<input type="submit" value="Buy">
+					</td>
+				</form>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

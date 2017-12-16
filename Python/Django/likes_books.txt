@@ -1,0 +1,55 @@
+Create the appropriate models and the appropriate relationship.  Design your models so that the following command would be supported
+Book.objects.first().uploader - this should return the user who uploaded the book
+User.objects.first().uploaded_books - this should return all the books that are uploaded by the first user
+Book.objects.first().liked_users - this should return all the users who liked the first book
+User.objects.first().liked_books - this should return all the books that were liked by the first user
+
+Create 3 different user accounts
+User.objects.create(first_name="Rachel", last_name="Green", email="rachel@green.com")
+User.objects.create(first_name="Phoebe", last_name="Buffay", email="phoebe@buffay.com")
+User.objects.create(first_name="Chandler", last_name="Bing", email="chandler@bing.com")
+
+Have the first user create 2 books.
+first_user = User.objects.first()
+Book.objects.create(name="Book 1", desc="This is Book 1", uploader=first_user)
+Book.objects.create(name="Book 2", desc="This is Book 2", uploader=first_user)
+
+Have the second user create 2 other books.
+second_user = User.objects.get(id=2)
+Book.objects.create(name="Book 3", desc="This is Book 3", uploader=second_user)
+Book.objects.create(name="Book 4", desc="This is Book 4", uploader=second_user)
+
+Have the third user create 2 other books.
+third_user = User.objects.get(id=3)
+Book.objects.create(name="Book 6", desc="This is Book 6", uploader=third_user)
+Book.objects.create(name="Book 7", desc="This is Book 7", uploader=third_user)
+
+Have the first user like the last book and the first book
+first_book = Book.objects.first()
+last_book = Book.objects.last()
+first_user.liked_books.add(first_book)
+first_user.liked_books.add(last_book)
+
+Have the second user like the first book and the third book
+third_book = Book.objects.get(id=3)
+second_user.liked_books.add(first_book))
+second_user.liked_books.add(third_book)
+
+Have the third user like all books
+third_user.liked_books.add(* Book.objects.all())
+
+Display all users who like the first book
+for user in first_book.liked_by.all():
+  print user.first_name
+
+Display the user who uploaded the first book
+first_book.uploader.first_name
+
+Display all users who like the second book
+second_book = Book.objects.get(id=2)
+for user in second_book.liked_by.all():
+  print user.first_name
+
+Display the user who uploaded the second book
+for user in second_book.liked_by.all():
+  print user.first_name

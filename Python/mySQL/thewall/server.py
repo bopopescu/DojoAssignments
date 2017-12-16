@@ -131,6 +131,14 @@ def log_in():
 	return redirect('/')
 
 
+# try to access session id, if it errors, then redirect back to login
+# try:
+# 		session['user_id']
+# except:
+# 	return redirect('/')
+
+# #if 'user_id' not in session:
+# 	return redirect('/')
 
 @app.route('/wall')
 def wall():
